@@ -7,4 +7,3 @@
 > do not care about this repo, this will later be deleted.
 
 hehehe
-eren yeager
