@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kage — Where stillness reveals the unseen</title>
+<title>Kage — Random</title>
 <meta name="description" content="A five-chapter night walk through a Kyoto mountain temple. Charred cypress, lantern light and a vermilion moon, rendered live in WebGL.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2305070a'/%3E%3Ccircle cx='16' cy='17' r='8' fill='%23e0231c'/%3E%3Crect x='4' y='8' width='24' height='2.6' fill='%23dfe7e0'/%3E%3Crect x='7' y='13' width='18' height='2' fill='%23dfe7e0'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="secret-pathways-assets/fonts.css">
@@ -111,20 +111,12 @@ h1,h2,h3{ font-weight:400; margin:0; letter-spacing:-.005em; }
 
 /* ============================================================= nav */
 .nav{
-  /* Width comes from --vw, not from right:0. A fixed element resolves its
-     inset against the initial containing block, and the page's own horizontal
-     overflow makes that block wider than the screen — 437 against a 390 phone,
-     860 against a 768 tablet — which carried the burger off the right edge.
-     --vw is the layout viewport, written on every resize. */
+
   position:fixed; top:0; left:0; width:var(--vw, 100%); height:var(--nav-h); z-index:50;
   display:flex; align-items:center; gap:24px; padding:0 var(--pad);
   transition:transform .55s var(--ease);
 }
-/* The sticky wash sits on its own layer rather than on the bar. A
-   backdrop-filter promotes its element to the containing block for any
-   position:fixed descendant, and the bar holds the mobile menu sheet — put the
-   blur here and the sheet was measured against an 84px bar instead of the
-   frame, for as long as the blur took to fade. */
+
 .nav::before{
   content:''; position:absolute; inset:0; z-index:-1; pointer-events:none;
   background:rgba(5,7,10,.62);
